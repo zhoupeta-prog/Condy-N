@@ -1,7 +1,11 @@
-# 🦞 OpenClaw 懶人包安裝器
+# 🦞 OpenClaw 懶人包安裝器（中文安裝教學）
 
+> **OpenClaw 安裝教學 | OpenClaw 中文指南 | OpenClaw 一鍵安裝**
+>
 > 一鍵安裝 OpenClaw，完整中文化界面，新手友善！  
 > **完全免費開源** 🎁
+>
+> 🔍 關鍵字：OpenClaw 安裝、OpenClaw 教學、OpenClaw 中文、OpenClaw macOS、OpenClaw 入門
 
 ## ✨ 功能特色
 
@@ -52,6 +56,32 @@ curl -O https://raw.githubusercontent.com/zhoupeta-prog/Condy-N/main/openclaw_ea
 # 執行
 python3 openclaw_easy_installer.py
 ```
+
+## 📖 關於本專案
+
+**OpenClaw 懶人包安裝器** 是由 **Condy N.** 開發的開源工具，專為中文用戶設計，解決 OpenClaw 安裝過程中的常見痛點：
+
+- ❌ 看不懂英文安裝說明
+- ❌ Node.js 環境配置失敗
+- ❌ 不知道該用哪個 API Key
+- ❌ 不會連接手機使用
+
+本工具提供**全中文界面**、**一鍵自動安裝**、**免費 LLM 平台推薦**，讓你在 5 分鐘內完成 OpenClaw 安裝，立即開始與 AI 助手對話！
+
+### 🔍 適合誰使用？
+- OpenClaw **新手入門**
+- 不想折騰 **Terminal 指令**
+- 偏好**中文界面**的用戶
+- macOS / Linux / WSL2 用戶
+
+### 🌟 為什麼選擇我們？
+| 功能 | 傳統安裝 | Condy N. 安裝器 |
+|:---|:---:|:---:|
+| 安裝時間 | 30+ 分鐘 | **5 分鐘** |
+| 界面語言 | 英文 | **全中文** |
+| 環境修復 | 手動 | **自動** |
+| 免費 API | 自己找 | **推薦清單** |
+| 手機連接 | 無教學 | **詳細指南** |
 
 ## 📋 系統需求
 
