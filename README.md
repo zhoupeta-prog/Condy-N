@@ -24,6 +24,8 @@
 
 > ⚠️ 第一次運行可能需要按住 `Control` 鍵點擊，選擇「打開」
 
+**📖 詳細教學：** [QUICK_START.md](QUICK_START.md) - 純文字步驟指南，零基礎也能懂！
+
 **直接下載連結：**
 ```
 https://github.com/zhoupeta-prog/Condy-N/releases/download/v0.1.0/OpenClaw-Installer-macOS.zip
