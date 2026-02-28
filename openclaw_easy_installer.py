@@ -287,6 +287,74 @@ class OpenClawInstaller:
         
         return all(c[1] == "✅" for c in checks if c[0] == "OpenClaw CLI")
         
+    def show_free_llm_options(self):
+        """顯示免費 LLM 平台選項"""
+        console.print()
+        console.print(Panel(
+            "[bold yellow]💡 沒有 API Key？沒問題！這些平台免費或提供試用額度：[/bold yellow]\n\n"
+            "[bold cyan]🆓 免費方案：[/bold cyan]\n"
+            "  • [bold]Groq[/bold] - 免費額度充足，速度快\n"
+            "    網址: https://console.groq.com\n"
+            "    支援: Llama 3, Mixtral 等\n\n"
+            "  • [bold]Together AI[/bold] - 新用戶有 $5 免費額度\n"
+            "    網址: https://api.together.xyz\n\n"
+            "  • [bold]Cohere[/bold] - 有免費層\n"
+            "    網址: https://cohere.com\n\n"
+            "[bold green]💰 試用方案：[/bold green]\n"
+            "  • [bold]Moonshot[/bold] - 新用戶有免費額度（我們推薦）\n"
+            "    網址: https://platform.moonshot.cn\n"
+            "    適合中文對話\n\n"
+            "  • [bold]OpenRouter[/bold] - 聚合多個模型\n"
+            "    網址: https://openrouter.ai",
+            border_style="yellow",
+            box=box.ROUNDED
+        ))
+
+    def show_recommended_skills(self):
+        """顯示推薦的免費 Skills"""
+        console.print()
+        console.print(Panel(
+            "[bold cyan]🛠️ 推薦安裝的免費 Skills（不需要 API Key）：[/bold cyan]\n\n"
+            "[bold]📋 必備基礎：[/bold]\n"
+            "  ✅ weather - 查詢天氣（完全免費）\n"
+            "     安裝: openclaw skills install weather\n\n"
+            "  ✅ reminders - 管理提醒事項\n"
+            "     安裝: openclaw skills install reminders\n\n"
+            "  ✅ apple-notes - 管理 Apple 筆記（macOS）\n"
+            "     安裝: openclaw skills install apple-notes\n\n"
+            "[bold]🔧 實用工具：[/bold]\n"
+            "  ✅ video-frames - 影片截圖\n"
+            "  ✅ nano-pdf - PDF 編輯\n"
+            "  ✅ github - GitHub 操作\n\n"
+            "[bold]📱 通道連接：[/bold]\n"
+            "  ✅ channels - 連接 Telegram/Discord\n"
+            "     設定: openclaw channels telegram setup",
+            border_style="blue",
+            box=box.ROUNDED
+        ))
+
+    def show_mobile_setup_guide(self):
+        """顯示手機連接指南"""
+        console.print()
+        console.print(Panel(
+            "[bold magenta]📱 如何與手機連結？兩種方式：[/bold magenta]\n\n"
+            "[bold]方式一：Telegram（推薦）[/bold]\n"
+            "  1. 下載 Telegram App\n"
+            "  2. 搜尋 @BotFather，創建新機器人\n"
+            "  3. 取得 Bot Token\n"
+            "  4. 運行: openclaw channels telegram setup\n"
+            "  5. 輸入 Token，完成！\n\n"
+            "[bold]方式二：Discord[/bold]\n"
+            "  1. 前往 Discord Developer Portal\n"
+            "     https://discord.com/developers/applications\n"
+            "  2. 創建 Application → Bot → 取得 Token\n"
+            "  3. 運行: openclaw channels discord setup\n"
+            "  4. 將 Bot 邀請到你的伺服器\n\n"
+            "[dim]💡 提示：手機連接後，你可以隨時隨地與 AI 對話！[/dim]",
+            border_style="magenta",
+            box=box.ROUNDED
+        ))
+
     def show_next_steps(self):
         """顯示後續步驟"""
         console.print()
@@ -299,8 +367,7 @@ class OpenClawInstaller:
             "[bold cyan]快速開始：[/bold cyan]\n"
             "  1. 運行: openclaw dashboard\n"
             "  2. 瀏覽器會自動打開 http://127.0.0.1:18789/\n"
-            "  3. 開始和你的 AI 助手對話！\n\n"
-            "[dim]需要連接 Telegram/Discord？運行: openclaw channels telegram setup[/dim]",
+            "  3. 開始和你的 AI 助手對話！",
             border_style="green",
             box=box.ROUNDED
         ))
@@ -339,6 +406,15 @@ class OpenClawInstaller:
         
         # 驗證
         self.verify_installation()
+        
+        # 顯示免費 LLM 選項（解決沒有 API Key 的痛點）
+        self.show_free_llm_options()
+        
+        # 顯示推薦 Skills
+        self.show_recommended_skills()
+        
+        # 顯示手機連接指南
+        self.show_mobile_setup_guide()
         
         # 顯示後續步驟
         self.show_next_steps()

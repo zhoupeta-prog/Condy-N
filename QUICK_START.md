@@ -128,7 +128,106 @@ Y ↵
 
 ---
 
-## 🎉 步驟 6：完成！開始使用
+## 💡 步驟 6：沒有 API Key？免費方案在這裡！
+
+### 🆓 免費 LLM 平台（推薦）
+
+#### Groq（完全免費，速度快）
+```
+1. 前往 https://console.groq.com
+2. 註冊帳號（免費）
+3. 創建 API Key
+4. 運行: openclaw configure
+5. 選擇 Groq 作為模型提供者
+
+✅ 優點：免費額度充足，支援 Llama 3、Mixtral
+```
+
+#### Moonshot（適合中文）
+```
+1. 前往 https://platform.moonshot.cn
+2. 手機註冊（送免費額度）
+3. 創建 API Key
+4. 運行: openclaw configure
+
+✅ 優點：中文表現好，適合台灣/香港/大陸用戶
+```
+
+#### Together AI（新用戶送 $5）
+```
+1. 前往 https://api.together.xyz
+2. 註冊帳號
+3. 獲得 $5 免費額度
+4. 配置到 OpenClaw
+```
+
+---
+
+## 🛠️ 步驟 7：安裝推薦的免費 Skills
+
+### 必裝清單（完全免費）
+
+```bash
+# 🌤️ 天氣查詢（免費 API）
+openclaw skills install weather
+
+# 📝 提醒事項（連接 Apple Reminders）
+openclaw skills install reminders
+
+# 📓 Apple 筆記（macOS 用戶）
+openclaw skills install apple-notes
+
+# 🎬 影片截圖
+openclaw skills install video-frames
+
+# 📄 PDF 編輯
+openclaw skills install nano-pdf
+```
+
+### 查看已安裝 Skills
+```
+openclaw skills list
+```
+
+---
+
+## 📱 步驟 8：與手機連結
+
+### Telegram（推薦）
+```
+📲 設定步驟：
+
+1. 下載 Telegram App
+2. 搜尋 @BotFather
+3. 輸入 /newbot 創建機器人
+4. 取得 Bot Token（像這樣：123456789:ABCdefGHI...）
+5. 在電腦運行：
+   openclaw channels telegram setup
+6. 貼上 Bot Token
+7. 完成！在手機 Telegram 搜尋你的機器人名稱
+
+✅ 現在你可以在手機上隨時隨地聊天！
+```
+
+### Discord
+```
+📲 設定步驟：
+
+1. 前往 https://discord.com/developers/applications
+2. 點擊 "New Application"
+3. 到 "Bot" 頁面，點擊 "Add Bot"
+4. 取得 Bot Token
+5. 在電腦運行：
+   openclaw channels discord setup
+6. 貼上 Token
+7. 生成邀請連結，將 Bot 加入你的伺服器
+
+✅ 現在可以在 Discord 上使用！
+```
+
+---
+
+## 🎉 步驟 9：開始使用！
 
 ### 常用指令
 ```
@@ -143,6 +242,9 @@ Y ↵
 
 ❓ 查看所有指令
    openclaw --help
+
+🛠️ 查看 Skills
+   openclaw skills list
 ```
 
 ### 第一次使用
@@ -150,6 +252,9 @@ Y ↵
 1. 在 Terminal 輸入：openclaw dashboard
 2. 瀏覽器自動打開控制面板
 3. 開始和你的 AI 助手對話！💬
+
+💡 提示：你可以問「今天天氣怎麼樣？」
+       如果你裝了 weather skill！
 ```
 
 ---

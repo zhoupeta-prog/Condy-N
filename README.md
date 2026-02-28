@@ -9,7 +9,9 @@
 - 🌐 **全中文介面** - 完整中文化輸出，告別英文錯誤訊息
 - ⚡ **智能環境修復** - 自動檢測並修復 Node.js、npm 等依賴
 - 🔧 **互動配置嚮導** - 引導式設定 API Keys、Gateway、Channels
-- 📱 **多平台支援** - macOS、Linux、Windows (WSL2)
+- 💡 **免費 LLM 推薦** - 安裝後自動推薦免費/試用 API 平台（Groq、Moonshot 等）
+- 🛠️ **Skills 推薦** - 推薦必裝的免費 Skills（天氣、提醒、筆記等）
+- 📱 **手機連接指南** - 詳細教學如何連結 Telegram/Discord
 - 🎨 **精美 TUI 介面** - 使用 Rich 打造現代化終端界面
 
 ## 🚀 快速開始
