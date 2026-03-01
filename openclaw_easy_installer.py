@@ -47,6 +47,18 @@ class OpenClawInstaller:
         self.npm_version: Optional[str] = None
         self.openclaw_installed = False
         
+    def play_sound(self, sound_name: str = "Glass"):
+        """播放提示音（VoiceOver 輔助）"""
+        try:
+            if self.system == "Darwin":  # macOS
+                subprocess.run(
+                    ["afplay", f"/System/Library/Sounds/{sound_name}.aiff"],
+                    capture_output=True,
+                    timeout=2
+                )
+        except:
+            pass  # 靜音失敗不影響安裝
+    
     def print_banner(self):
         """顯示歡迎橫幅"""
         banner = Text()
@@ -59,6 +71,10 @@ class OpenClawInstaller:
             border_style="cyan",
             box=box.ROUNDED
         ))
+        
+        # VoiceOver 提示
+        console.print("\n[dim]♿ VoiceOver 使用者: 按 Command + F5 啟用語音導航[/dim]")
+        console.print("[dim]   安裝過程會自動朗讀每個步驟[/dim]\n")
         
     def check_prerequisites(self) -> Tuple[bool, list]:
         """檢查系統環境"""
@@ -419,7 +435,11 @@ class OpenClawInstaller:
         # 顯示後續步驟
         self.show_next_steps()
         
+        # 安裝完成提示音（VoiceOver 輔助）
+        self.play_sound("Hero")
+        
         console.print()
+        console.print("[bold green]♿ VoiceOver 使用者: 安裝已完成！[/bold green]")
         console.print("[dim]感謝使用 OpenClaw 懶人包安裝器！[/dim]")
         console.print("[dim cyan]👩‍💻 作者：Condy N. 🐙 | 讓技術觸手可及[/dim cyan]")
         console.print("[dim]如果覺得有幫助，歡迎贊助支持持續創作 💜[/dim]")

@@ -13,6 +13,20 @@ BLUE='\033[0;34m'
 CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
+# VoiceOver 提示音函數
+vo_alert() {
+    # 嘗試播放提示音（靜音失敗也沒關係）
+    afplay /System/Library/Sounds/Glass.aiff 2>/dev/null || true
+}
+
+vo_success() {
+    afplay /System/Library/Sounds/Hero.aiff 2>/dev/null || true
+}
+
+vo_error() {
+    afplay /System/Library/Sounds/Basso.aiff 2>/dev/null || true
+}
+
 # 打印標題
 print_banner() {
     echo ""
@@ -113,9 +127,20 @@ PYTHON_SCRIPT
 # 主程序
 main() {
     print_banner
+    
+    # VoiceOver 開場提示
+    echo ""
+    echo -e "${CYAN}♿ VoiceOver 使用者: 按 Command + F5 啟用語音導航${NC}"
+    echo -e "${CYAN}   安裝過程會自動朗讀每個步驟${NC}"
+    echo ""
+    sleep 2
+    
     check_python
     echo ""
     download_and_run
+    
+    # 完成提示
+    vo_success
 }
 
 main "$@"

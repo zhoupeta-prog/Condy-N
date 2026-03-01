@@ -1,6 +1,32 @@
 # 🚀 OpenClaw 快速上手指南（文字版）
 
 > 💡 零圖片也能懂！用 emoji 和符號帶你 3 分鐘完成安裝
+> ♿ 全面支援 macOS VoiceOver 螢幕閱讀器
+
+---
+
+## ♿ macOS VoiceOver 使用者指南
+
+### 啟用 VoiceOver
+```
+⌨️ 快速鍵：Command + F5
+或
+🔊 對 Siri 說：「打開 VoiceOver」
+```
+
+### 安裝過程中的 VoiceOver 導航
+| 快速鍵 | 功能 |
+|--------|------|
+| `Control + Option + →` | 下一個項目 |
+| `Control + Option + ←` | 上一個項目 |
+| `Control + Option + 空白鍵` | 點擊/確認 |
+| `Control + Option + I` | 項目概覽 |
+| `Command + F5` | 關閉 VoiceOver |
+
+### 💡 VoiceOver 提示
+- 所有安裝步驟都有清晰的 emoji 標記
+- Terminal 輸出會自動朗讀
+- 按 Tab 鍵可在按鈕間切換
 
 ---
 
@@ -60,12 +86,22 @@
 ### ✅ 正確做法
 ```
 步驟：
-1️⃣  按住 Control 鍵不放
+1️⃣  按住 control 鍵不放
 2️⃣  點擊「啟動安裝器.command」
 3️⃣  選擇「打開」
 4️⃣  點擊「仍要打開」
 
 🎉 成功！Terminal 視窗會打開
+```
+
+#### ♿ VoiceOver 使用者
+```
+1. 選中「啟動安裝器.command」
+2. 按 control + 點擊（或 control + Option + Shift + M 打開選單）
+3. 選擇「打開」
+4. 在對話框中選擇「仍要打開」
+
+💡 Terminal 打開後，VoiceOver 會自動朗讀安裝進度
 ```
 
 ---
@@ -97,6 +133,17 @@
 ```
 
 💡 **完全自動！不需要輸入任何指令！**
+
+#### ♿ VoiceOver 安裝提示
+```
+📢 Terminal 會朗讀每個步驟：
+• "正在安裝 Node.js..." 
+• "安裝完成！"
+• "配置嚮導已啟動"
+
+🔔 完成時會聽到提示音
+⏱️ 安裝約需 2-5 分鐘，請耐心等待
+```
 
 ---
 
