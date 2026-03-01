@@ -146,7 +146,7 @@ $ ./openclaw-installer
 ### 微信支付
 掃描下方 QR Code 支持：
 
-<img src="donate-wechat.jpg" width="300" alt="微信支付贊助二維碼">
+<img src="donate-wechat.png" width="300" alt="微信支付贊助二維碼">
 
 **感謝你的支持！** 💜 每一筆贊助都讓我能投入更多時間改善這個工具。
 
